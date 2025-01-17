@@ -51,6 +51,7 @@ void ativar_todas_leds() {
 }
 
 void alternar_leds() {
+ led-verde
     // Função para alternar os LEDs (verde, azul, vermelho) a cada 200ms
     while (true) {
         gpio_put(green, 1);  // Liga o LED verde
@@ -62,6 +63,19 @@ void alternar_leds() {
         gpio_put(red, 1);    // Liga o LED vermelho
         sleep_ms(200);       // Espera 200ms
         gpio_put(red, 0);    // Desliga o LED vermelho
+
+     
+     while(true){
+          gpio_put(green, 1);
+          sleep_ms(200);
+          gpio_put(green, 0);
+          gpio_put(blue, 1);
+          sleep_ms(200);
+          gpio_put(blue, 0);
+          gpio_put(red, 1);
+          sleep_ms(200);
+          gpio_put(red, 0);
+ main
     }
 }
 
