@@ -1,5 +1,3 @@
-# TAREFA01_EMBARCATECH
-
 # Sistema de Controle com Teclado Matricial e Buzzer
 
 ### Grupo 4 - Subgrupo 1:
