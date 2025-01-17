@@ -9,3 +9,6 @@
 - **'C'**: Ativa o LED vermelho.
 - **'D'**: Ativa todos os LEDs.
 - **'#'**: Ativa o buzzer.
+
+## Link do video de apresentação do projeto:
+ 
