@@ -50,7 +50,9 @@ void alternar_leds() {
 }
 
 void ativar_buzzer() {
-    
+    gpio_put(buzzer, 1);
+    sleep_ms(500);
+    gpio_put(buzzer, 0);
 }
 
 // Inicialização do teclado matricial
@@ -121,7 +123,7 @@ int main() {
                     //ativar_todas_leds();
                     break;
                 case '#':
-                    //ativar_buzzer();
+                    ativar_buzzer();
                     break;
                 case '*':
                    //desativar_todas_leds();
