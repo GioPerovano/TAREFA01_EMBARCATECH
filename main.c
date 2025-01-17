@@ -25,7 +25,7 @@ const char key_map[rows][cols] = {
 
 // Funções auxiliares para controlar os LEDs e o buzzer
 void ativar_led_verde() {
-    gpio_put(green, 1);  // Liga o LED verde (pino 11)
+    gpio_put(green, 1);  // Liga o LED verde (pino 13)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
     gpio_put(green, 0);  // Desliga o LED verde
 }
@@ -35,7 +35,9 @@ void ativar_led_azul() {
 }
 
 void ativar_led_vermelho() {
-    // Função para ativar o LED vermelho (ainda não implementada)
+    gpio_put(green, 1);  // Liga o LED verde (pino 11)
+    sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
+    gpio_put(green, 0);  // Desliga o LED verde
 }
 
 void desativar_todas_leds() {
