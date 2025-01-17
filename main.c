@@ -45,8 +45,8 @@ void ativar_todas_leds() {
 }
 
 void alternar_leds() {
-   
-    while(true){
+     
+     while(true){
           gpio_put(green, 1);
           sleep_ms(200);
           gpio_put(green, 0);
