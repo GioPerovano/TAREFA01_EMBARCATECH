@@ -25,6 +25,8 @@ const char key_map[rows][cols] = {
 
 // Funções auxiliares para controlar os LEDs e o buzzer
 void ativar_led_verde() {
+    gpio_put(red, 0);  // Desliga o LED vermelho antes de ligar o verde
+    gpio_put(blue, 0);  // Desliga o LED azul antes de ligar o verde
     gpio_put(green, 1);  // Liga o LED verde (pino 13)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
     gpio_put(green, 0);  // Desliga o LED verde
@@ -32,16 +34,20 @@ void ativar_led_verde() {
 }
 
 void ativar_led_azul() {
+    gpio_put(red, 0);  // Desliga o LED vermelho antes de ligar o azul
+    gpio_put(green, 0);  // Desliga o LED verde antes de ligar o azul
     gpio_put(blue, 1);  // Liga o LED azul (pino 12)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
-    gpio_put(green, 0);  // Desliga o LED azul
+    gpio_put(blue, 0);  // Desliga o LED azul
     printf("LED AZUL LIGADO\n");
 }
 
 void ativar_led_vermelho() {
+    gpio_put(blue, 0);  // Desliga o LED azul antes de ligar o vermelho
+    gpio_put(green, 0);  // Desliga o LED verde antes de ligar o vermelho
     gpio_put(green, 1);  // Liga o LED vermelho (pino 11)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
-    gpio_put(green, 0);  // Desliga o LED vermelho
+    gpio_put(red, 0);  // Desliga o LED vermelho
     printf("LED VERMELHO LIGADO\n");
 }
 
@@ -60,8 +66,11 @@ void ativar_todas_leds() {
 }
 
 void alternar_leds() {
- led-verde
     // Função para alternar os LEDs (verde, azul, vermelho) a cada 200ms
+    gpio_put(red, 0);  // Desliga o LED vermelho antes de alternar
+    gpio_put(green, 0);  // Desliga o LED verde antes de alternar
+    gpio_put(blue, 0);  // Desliga o LED azul antes de alternar
+
     while (true) {
         gpio_put(green, 1);  // Liga o LED verde
         sleep_ms(200);       // Espera 200ms
@@ -91,6 +100,7 @@ void alternar_leds() {
 }
 
 void ativar_buzzer() {
+    gpio_put(buzzer, 0); // Desliga o buzzer antes de começar
     gpio_put(buzzer, 1); // Liga o buzzer
     sleep_ms(500);       // Mantém o buzzer ligado por 0,5 segundo
     gpio_put(buzzer, 0); // Desliga o buzzer
