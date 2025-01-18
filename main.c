@@ -82,7 +82,6 @@ void alternar_leds() {
           sleep_ms(200);
           gpio_put(red, 0);
           printf("LEDS ALTERNANDO\n");
- main
     }
 }
 
