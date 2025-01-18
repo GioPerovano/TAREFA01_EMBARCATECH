@@ -16,7 +16,7 @@ Os sistemas embarcados estão amplamente presentes em dispositivos do dia a dia,
 ## Instruções:
 
 - **'A'**: Ativa o LED verde.
-- **'B'**: Ativa o LED azul.
+- **'B'**: Controle do LED azul.
 - **'C'**: Ativa o LED vermelho.
 - **'D'**: Ativa todos os LEDs.
 - **'#'**: Ativa o buzzer.
