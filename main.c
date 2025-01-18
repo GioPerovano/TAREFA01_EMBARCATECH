@@ -70,19 +70,6 @@ void alternar_leds() {
     gpio_put(red, 0);  // Desliga o LED vermelho antes de alternar
     gpio_put(green, 0);  // Desliga o LED verde antes de alternar
     gpio_put(blue, 0);  // Desliga o LED azul antes de alternar
-
-    while (true) {
-        gpio_put(green, 1);  // Liga o LED verde
-        sleep_ms(200);       // Espera 200ms
-        gpio_put(green, 0);  // Desliga o LED verde
-        gpio_put(blue, 1);   // Liga o LED azul
-        sleep_ms(200);       // Espera 200ms
-        gpio_put(blue, 0);   // Desliga o LED azul
-        gpio_put(red, 1);    // Liga o LED vermelho
-        sleep_ms(200);       // Espera 200ms
-        gpio_put(red, 0);    // Desliga o LED vermelho
-        printf("LEDS ALTERNANDO\n");
-
      
      while(true){
           gpio_put(green, 1);
