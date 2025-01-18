@@ -10,6 +10,7 @@
 #define blue 12   // Pino do LED azul
 #define red 13    // Pino do LED vermelho
 #define buzzer 21 // Pino do buzzer
+bool led_azul_ativo = 0; // VARIAVEL GLOBAL QUE GUARDA O VALOR INICIAL DO LED 0 = False
 
 // Mapeamento dos pinos do teclado (linhas e colunas do teclado matricial)
 const uint8_t row_pins[rows] = {8, 7, 6, 5};  // Pinos das linhas (R1, R2, R3, R4)
@@ -33,14 +34,20 @@ void ativar_led_verde() {
     printf("LED VERDE LIGADO\n");
 }
 
-void ativar_led_azul() {
-    gpio_put(red, 0);  // Desliga o LED vermelho antes de ligar o azul
-    gpio_put(green, 0);  // Desliga o LED verde antes de ligar o azul
-    gpio_put(blue, 1);  // Liga o LED azul (pino 12)
-    sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
-    gpio_put(blue, 0);  // Desliga o LED azul
-    printf("LED AZUL LIGADO\n");
-}
+void controle_led_azul()
+{
+    if (led_azul_ativo)
+    {
+        gpio_put(blue, 0); // Desliga o LED azul
+        led_azul_ativo = false;
+        printf("LED azul DESLIGADO\n");
+    }
+    else
+    {
+        gpio_put(blue, 1); // Liga o LED azul
+        led_azul_ativo = true;
+        printf("LED azul LIGADO\n");
+    }
 
 void ativar_led_vermelho() { 
     gpio_put(green, 0);  // Desliga o LED verde antes de ligar o vermelho
@@ -154,7 +161,7 @@ int main() {
                     ativar_led_verde();  // Ativa o LED verde ao pressionar a tecla A
                     break;
                 case 'B':
-                    ativar_led_azul();  // Ativa o LED azul (não implementado ainda)
+                    controle_led_azul();
                     break;
                 case 'C':
                     ativar_led_vermelho();  // Ativa o LED vermelho (não implementado ainda)
@@ -166,7 +173,7 @@ int main() {
                     ativar_buzzer();  // Ativa o buzzer
                     break;
                 case '*':
-                    desativar_todas_leds();  // Desativa todos os LEDs
+                    desativar_todas_leds();  // Desativa todos os LEDs (Não implementada ainda)
                     break;
                 case '0':
                     alternar_leds();  // Alterna os LEDs (verde, azul, vermelho)
