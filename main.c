@@ -165,7 +165,7 @@ int main() {
                     controle_led_azul();
                     break;
                 case 'C':
-                    ativar_led_vermelho();  // Ativa o LED vermelho (não implementado ainda)
+                    ativar_led_vermelho();  // Ativa o LED vermelho
                     break;
                 case 'D':
                     ativar_todas_leds();  // Ativa todos os LEDs (verde, azul, vermelho)
@@ -174,7 +174,7 @@ int main() {
                     ativar_buzzer();  // Ativa o buzzer
                     break;
                 case '*':
-                    desativar_todas_leds();  // Desativa todos os LEDs (Não implementada ainda)
+                    desativar_todas_leds();  // Desativa todos os LEDs
                     break;
                 case '0':
                     alternar_leds();  // Alterna os LEDs (verde, azul, vermelho)
