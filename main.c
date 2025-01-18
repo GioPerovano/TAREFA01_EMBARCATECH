@@ -28,28 +28,35 @@ void ativar_led_verde() {
     gpio_put(green, 1);  // Liga o LED verde (pino 13)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
     gpio_put(green, 0);  // Desliga o LED verde
+    printf("LED VERDE LIGADO\n");
 }
 
 void ativar_led_azul() {
-    // Função para ativar o LED azul (ainda não implementada)
+    gpio_put(blue, 1);  // Liga o LED azul (pino 12)
+    sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
+    gpio_put(green, 0);  // Desliga o LED azul
+    printf("LED AZUL LIGADO\n");
 }
 
 void ativar_led_vermelho() {
-    gpio_put(green, 1);  // Liga o LED verde (pino 11)
+    gpio_put(green, 1);  // Liga o LED vermelho (pino 11)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
-    gpio_put(green, 0);  // Desliga o LED verde
+    gpio_put(green, 0);  // Desliga o LED vermelho
+    printf("LED VERMELHO LIGADO\n");
 }
 
 void desativar_todas_leds() {
     gpio_put(green, 0);  // Desliga o LED verde
     gpio_put(blue, 0);   // Desliga o LED azul
     gpio_put(red, 0);    // Desliga o LED vermelho
+    printf("TODOS LEDS DESLIGADOS\n");
 }
 
 void ativar_todas_leds() {
     gpio_put(green, 1);  // Liga o LED verde
     gpio_put(blue, 1);   // Liga o LED azul
     gpio_put(red, 1);    // Liga o LED vermelho
+    printf("TODOS LEDS LIGADOS\n");
 }
 
 void alternar_leds() {
@@ -65,6 +72,7 @@ void alternar_leds() {
         gpio_put(red, 1);    // Liga o LED vermelho
         sleep_ms(200);       // Espera 200ms
         gpio_put(red, 0);    // Desliga o LED vermelho
+        printf("LEDS ALTERNANDO\n");
 
      
      while(true){
@@ -77,6 +85,7 @@ void alternar_leds() {
           gpio_put(red, 1);
           sleep_ms(200);
           gpio_put(red, 0);
+          printf("LEDS ALTERNANDO\n");
  main
     }
 }
@@ -85,6 +94,7 @@ void ativar_buzzer() {
     gpio_put(buzzer, 1); // Liga o buzzer
     sleep_ms(500);       // Mantém o buzzer ligado por 0,5 segundo
     gpio_put(buzzer, 0); // Desliga o buzzer
+    printf("BUZZER LIGADO\n");
 }
 
 // Inicialização do teclado matricial
