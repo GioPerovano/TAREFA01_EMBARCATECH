@@ -27,7 +27,7 @@ const char key_map[rows][cols] = {
 void ativar_led_verde() {
     gpio_put(red, 0);  // Desliga o LED vermelho antes de ligar o verde
     gpio_put(blue, 0);  // Desliga o LED azul antes de ligar o verde
-    gpio_put(green, 1);  // Liga o LED verde (pino 13)
+    gpio_put(green, 1);  // Liga o LED verde (pino 11)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
     gpio_put(green, 0);  // Desliga o LED verde
     printf("LED VERDE LIGADO\n");
@@ -42,8 +42,13 @@ void ativar_led_azul() {
     printf("LED AZUL LIGADO\n");
 }
 
-void ativar_led_vermelho() { //LUCAS
-
+void ativar_led_vermelho() { 
+   gpio_put(green, 0);  // Desliga o LED verde antes de ligar o vermelho
+    gpio_put(blue, 0);  // Desliga o LED azul antes de ligar o vermelho
+    gpio_put(red, 1);  // Liga o LED vermelho(pino 13)
+    sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
+    gpio_put(red, 0);  // Desliga o LED vermelho
+    printf("LED VERMELHO LIGADO\n");
 }
 
 void desativar_todas_leds() { //INÁCIO
