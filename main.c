@@ -43,7 +43,7 @@ void ativar_led_azul() {
 }
 
 void ativar_led_vermelho() { 
-   gpio_put(green, 0);  // Desliga o LED verde antes de ligar o vermelho
+    gpio_put(green, 0);  // Desliga o LED verde antes de ligar o vermelho
     gpio_put(blue, 0);  // Desliga o LED azul antes de ligar o vermelho
     gpio_put(red, 1);  // Liga o LED vermelho(pino 13)
     sleep_ms(1000);      // Deixa o LED ligado por 1 segundo
