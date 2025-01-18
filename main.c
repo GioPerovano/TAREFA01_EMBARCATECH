@@ -42,15 +42,12 @@ void ativar_led_azul() {
     printf("LED AZUL LIGADO\n");
 }
 
-void ativar_led_vermelho() {
+void ativar_led_vermelho() { //LUCAS
 
 }
 
-void desativar_todas_leds() {
-    gpio_put(green, 0);  // Desliga o LED verde
-    gpio_put(blue, 0);   // Desliga o LED azul
-    gpio_put(red, 0);    // Desliga o LED vermelho
-    printf("TODOS LEDS DESLIGADOS\n");
+void desativar_todas_leds() { //INÁCIO
+
 }
 
 void ativar_todas_leds() {
