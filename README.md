@@ -22,6 +22,7 @@ Os sistemas embarcados estão amplamente presentes em dispositivos do dia a dia,
 - **'*'**: Desliga todas as LEDS.
 - **'0'**: Alterna entre todas as cores.
 
+<img width="265" alt="image" src="https://github.com/user-attachments/assets/3bc03521-8726-44ce-a3d0-c2e26f976ac2" />
 
 
 
