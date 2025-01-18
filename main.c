@@ -48,6 +48,7 @@ void controle_led_azul()
         led_azul_ativo = true;
         printf("LED azul LIGADO\n");
     }
+}
 
 void ativar_led_vermelho() { 
     gpio_put(green, 0);  // Desliga o LED verde antes de ligar o vermelho
