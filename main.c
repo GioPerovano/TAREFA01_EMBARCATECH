@@ -59,7 +59,7 @@ void ativar_led_vermelho() {
     printf("LED VERMELHO LIGADO\n");
 }
 
-void desativar_todas_leds() { //INÁCIO
+void desativar_todas_leds() { 
     gpio_put(green, 0);
     pio_put(blue, 0);
     gpio_put(red, 0);
