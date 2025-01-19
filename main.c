@@ -60,7 +60,9 @@ void ativar_led_vermelho() {
 }
 
 void desativar_todas_leds() { //INÁCIO
-
+    gpio_put(green, 0);
+    pio_put(blue, 0);
+    gpio_put(red, 0);
 }
 
 void ativar_todas_leds() {
