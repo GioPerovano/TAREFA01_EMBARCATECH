@@ -1,4 +1,4 @@
-# Sistema de Controle com Teclado Matricial e Buzzer
+# 🖥️ Sistema de Controle com Teclado Matricial e Buzzer
 
 ### Grupo 4 - Subgrupo 1:
 #### - Giovanna Perovano e Silva
