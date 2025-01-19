@@ -73,12 +73,21 @@ void ativar_todas_leds() {
 }
 
 void alternar_leds() {
+
+    char key = read_keypad();
     // Função para alternar os LEDs (verde, azul, vermelho) a cada 200ms
     gpio_put(red, 0);  // Desliga o LED vermelho antes de alternar
     gpio_put(green, 0);  // Desliga o LED verde antes de alternar
     gpio_put(blue, 0);  // Desliga o LED azul antes de alternar
      
-     while(true){
+ while(true){
+
+        char new_key = read_keypad();
+            if (new_key != '0') {
+            // Sai do loop se outra tecla for pressionada
+            break;
+        }
+          
           gpio_put(green, 1);
           sleep_ms(200);
           gpio_put(green, 0);
@@ -89,7 +98,8 @@ void alternar_leds() {
           sleep_ms(200);
           gpio_put(red, 0);
           printf("LEDS ALTERNANDO\n");
-    }
+ }  
+          
 }
 
 void ativar_buzzer() {
