@@ -27,7 +27,8 @@ Os sistemas embarcados estão amplamente presentes em dispositivos do dia a dia,
 
 ## Link da ferramenta Wokwi: https://wokwi.com/projects/420283505042484225
 
-## Link do vídeo de apresentação do projeto: https://youtu.be/Yr8tqzXDaMo
+## Link do vídeo de apresentação do projeto no Youtube: https://youtu.be/Yr8tqzXDaMo
+## Link do vídeo de apresentação do projeto no Google Drive: https://drive.google.com/file/d/16aC2NN2BL1sAUtumY2Q17nerBk0vzpN4/view?usp=sharing
 
 
 
